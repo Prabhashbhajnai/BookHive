@@ -7,6 +7,8 @@ To use this repository
 > * npm run dev --> in the server folder to run the backend server
 
 ## Authors
-* @Prabhashbhajnai
-* @kushagra24johri
-* @aswin2108
+* [@Prabhashbhajnai](https://github.com/Prabhashbhajnai)
+* [@Kushagra](https://github.com/kushagra24johri)
+* [@Aswin](https://github.com/aswin2108)
+* [@Vartika](https://github.com/Var-01)
+* [@vidushi](https://github.com/vidushi07)

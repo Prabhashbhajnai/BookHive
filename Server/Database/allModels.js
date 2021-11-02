@@ -4,7 +4,7 @@ import { PublicationModel } from "./publication";
 import { PreIssueModel } from "./preissue";
 import { QuespaperModel } from "./quespaper";
 import { ReviewModel } from "./reviews";
-import { Teachermodel } from "./teacher";
+import { TeacherModel } from "./teacher";
 import { UserModel } from "./user";
 
-export { BookModel, AuthorModel, PublicationModel, PreIssueModel, QuespaperModel, ReviewModel, Teachermodel, UserModel};
+export { BookModel, AuthorModel, PublicationModel, PreIssueModel, QuespaperModel, ReviewModel, TeacherModel, UserModel};

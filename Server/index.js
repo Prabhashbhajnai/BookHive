@@ -5,9 +5,14 @@ require("dotenv").config();
 import express from "express";
 import cors from "cors";
 import helmet from "helmet";
+import passport from "passport";
+
+// configs
+import googleAuthConfig from "./config/google.config";
 
 // microservice routes
 import Auth from "./API/Auth";
+import Books from "./API/Books";
 
 // Database connection
 import ConnectDB from "./Database/connection";
@@ -19,9 +24,15 @@ elibrary.use(express.json());
 elibrary.use(express.urlencoded({extended: false}));
 elibrary.use(helmet());
 elibrary.use(cors());
+elibrary.use(passport.initialize());
+elibrary.use(passport.session());
+
+// passport configuration
+googleAuthConfig(passport);
 
 // Application Routes
-elibrary.use("/auth", Auth)
+elibrary.use("/auth", Auth);
+elibrary.use("/books", Books);
 
 elibrary.get("/", (req, res) => res.json({message: "Setup Success"}));
 

@@ -19,6 +19,14 @@ function App() {
     </Route>
     <HomeLayoutHOC path="/:type" exact component={Homepage} />
     <BooksLayoutHOC path="/books/:id" exact component={Temp} /> 
+    <BooksLayoutHOC path="/books/:id/humor" exact component={Temp} /> 
+    <BooksLayoutHOC path="/books/:id/fiction" exact component={Temp} />
+    <BooksLayoutHOC path="/books/:id/science-fic" exact component={Temp} />
+    <BooksLayoutHOC path="/books/:id/romance" exact component={Temp} />
+    <BooksLayoutHOC path="/books/:id/science-tech" exact component={Temp} />
+    <BooksLayoutHOC path="/books/:id/mystry" exact component={Temp} />
+    <BooksLayoutHOC path="/books/:id/bio-auto-graphy" exact component={Temp} />
+    <BooksLayoutHOC path="/books/:id/fable" exact component={Temp} />
 
   </>
   );

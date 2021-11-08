@@ -8,6 +8,7 @@ import Homepage from "./Components/Homepage";
 
 //page
 import Books from "./Page/Books";
+import Humor from "./Page/BooksType/Humor";
 
 function App() {
   return (
@@ -17,9 +18,12 @@ function App() {
     <Route path="/"exact>
       <Redirect to="/:type" />
     </Route>
+    <Route path="/books/:id" exact>
+      <Redirect to="/books/:id/humor" />
+    </Route>
     <HomeLayoutHOC path="/:type" exact component={Homepage} />
-    <BooksLayoutHOC path="/books/:id" exact component={Temp} /> 
-    <BooksLayoutHOC path="/books/:id/humor" exact component={Temp} /> 
+
+    <BooksLayoutHOC path="/books/:id/humor" exact component={Humor} /> 
     <BooksLayoutHOC path="/books/:id/fiction" exact component={Temp} />
     <BooksLayoutHOC path="/books/:id/science-fic" exact component={Temp} />
     <BooksLayoutHOC path="/books/:id/romance" exact component={Temp} />
@@ -27,6 +31,9 @@ function App() {
     <BooksLayoutHOC path="/books/:id/mystry" exact component={Temp} />
     <BooksLayoutHOC path="/books/:id/bio-auto-graphy" exact component={Temp} />
     <BooksLayoutHOC path="/books/:id/fable" exact component={Temp} />
+	<BooksLayoutHOC path="/books/:id/horror" exact component={Temp} />
+	<BooksLayoutHOC path="/books/:id/s-story" exact component={Temp} />
+	<BooksLayoutHOC path="/books/:id/poem" exact component={Temp} />
 
   </>
   );

@@ -62,6 +62,21 @@ const TabContainer=(props)=>{
      	route:"fable",
      	isActive:currentPath.includes("fable"),
      },
+     {
+     	title:"Horror",
+     	route:"horror",
+     	isActive:currentPath.includes("horror"),
+     },
+     {
+     	title:"Short Stories",
+     	route:"s-story",
+     	isActive:currentPath.includes("s-story"),
+     },
+     {
+     	title:"Poetry",
+     	route:"poem",
+     	isActive:currentPath.includes("poem"),
+     },
      ];
 	return(
        <>

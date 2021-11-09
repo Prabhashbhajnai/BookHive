@@ -19,7 +19,7 @@ const Fable=()=>{
 		                  	<BsBook />
 		                  	by: Author Name
 		                  </span>
-		                  <p className="text-gray-300 text-xs">The description of the book can be added here. It should include everything about the book but in a short manner</p>
+		                  <p className="text-gray-300 text-xs truncate">The description of the book can be added here. It should include everything about the book but in a short manner</p>
 		              </div>
 		        </div>
 		    </div>

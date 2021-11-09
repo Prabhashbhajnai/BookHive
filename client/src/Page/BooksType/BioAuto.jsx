@@ -19,7 +19,7 @@ const BioAuto=()=>{
 		                  	<BsBook />
 		                  	by: Author Name
 		                  </span>
-		                  <p className="text-gray-300 text-xs">The description of the book can be added here. It should include everything about the book but in a short manner</p>
+		                  <p className="text-gray-300 truncate">This book is a type of fiction which will be truncated</p>
 		              </div>
 		        </div>
 		    </div>

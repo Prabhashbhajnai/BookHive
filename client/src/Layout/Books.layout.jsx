@@ -12,7 +12,7 @@ const BooksLayout=(props)=>{
 	    <div className="container mx-auto px-4 lg:px-20">
 	    	<Image />
 	    	<div className="my-4">
-	    	<TabContainer ></TabContainer>
+	    	<TabContainer />
 	    	</div>
 	    	{props.children}
 	    </div>

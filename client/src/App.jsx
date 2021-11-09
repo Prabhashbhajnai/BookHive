@@ -32,7 +32,6 @@ function App() {
       <Redirect to="/books/:id/humor" />
     </Route>
     <HomeLayoutHOC path="/:type" exact component={Homepage} />
- 
     <BooksLayoutHOC path="/books/:id/humor" exact component={Humor} /> 
     <BooksLayoutHOC path="/books/:id/fiction" exact component={Fiction} />
     <BooksLayoutHOC path="/books/:id/science-fic" exact component={ScFi} />

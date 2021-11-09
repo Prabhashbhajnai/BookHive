@@ -23,8 +23,8 @@ const HomeSmCard = ({image, title}) => {
 const HomeLgCard = ({image, title}) => {
     return (
     <>
-       <div className="hidden lg:block w-64 h-48 ">
-           <div className="w-full h-40">
+       <div className="hidden lg:block w-64 h-48 overflow-hidden">
+           <div className="w-full h-40 transform transition duration-1000 hover:scale-105">
                <img src={image}
                alt="Book"
                className="w-full h-full object-cover rounded-md shadow-lg"

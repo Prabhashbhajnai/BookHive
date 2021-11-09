@@ -1,6 +1,6 @@
 import React from "react";
 import {AiTwotoneStar} from "react-icons/ai";
-import {Link} from "react-router-dom";
+import {Link} from "react-router";
 
 const SourcesCard = (props) => {
     return (
@@ -31,7 +31,7 @@ const SourcesCard = (props) => {
                />
          </div>
          <div className=" my-2 flex flex-col gap-2">
-            <Link to={"/books/:id"}>
+            
              <div className="flex items-center justify-between">
                  <h4 className="text-xl font-medium">{props.name}</h4>
                  <span className="bg-green-800 text-white text-sm flex items-center p-1 rounded  ">
@@ -42,7 +42,7 @@ const SourcesCard = (props) => {
                  <p>{props.category.join(", ")}</p>
                  <p>₹ {props.averageCost} for one</p>
              </div>
-             </Link>
+             
          </div>
     </div>
     </>

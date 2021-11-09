@@ -1,11 +1,12 @@
 import React from "react";
 import {BsBook} from "react-icons/bs";
 
-const Humor=()=>{
+const ScFi=()=>{
 	return(
 		<>
 		    <div className="pb-6">
-		       <p>Comedy may be divided into multiple genres based on the source of humor, the method of delivery, and the context in which it is delivered. These classifications overlap, and most comedians can fit into multiple genres. </p>
+		       <p>Science fiction (sometimes shortened to sci-fi or SF) is a genre of speculative fiction that typically deals with imaginative and futuristic concepts such as advanced science and technology, space exploration, time travel, parallel universes, and extraterrestrial life. 
+		       </p>
 		    </div>
 		    <div className=" bg-white shadow-md rounded-md w-24 md:w-40">
 		       <div className="w-full h-32">
@@ -26,4 +27,4 @@ const Humor=()=>{
 	);
 }
 
-export default Humor;
+export default ScFi;

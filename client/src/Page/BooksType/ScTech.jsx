@@ -1,11 +1,12 @@
 import React from "react";
 import {BsBook} from "react-icons/bs";
 
-const Humor=()=>{
+const ScTech=()=>{
 	return(
 		<>
 		    <div className="pb-6">
-		       <p>Comedy may be divided into multiple genres based on the source of humor, the method of delivery, and the context in which it is delivered. These classifications overlap, and most comedians can fit into multiple genres. </p>
+		       <p> Technology in science fiction delves into the possibilities and implications of new technological concepts. Authors have taken, or created, new innovations and technologies, and elaborated on what they might be and how they might be used.
+		       </p>
 		    </div>
 		    <div className=" bg-white shadow-md rounded-md w-24 md:w-40">
 		       <div className="w-full h-32">
@@ -26,4 +27,4 @@ const Humor=()=>{
 	);
 }
 
-export default Humor;
+export default ScTech;

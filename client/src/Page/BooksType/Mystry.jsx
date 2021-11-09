@@ -1,11 +1,12 @@
 import React from "react";
 import {BsBook} from "react-icons/bs";
 
-const Humor=()=>{
+const Mystry=()=>{
 	return(
 		<>
 		    <div className="pb-6">
-		       <p>Comedy may be divided into multiple genres based on the source of humor, the method of delivery, and the context in which it is delivered. These classifications overlap, and most comedians can fit into multiple genres. </p>
+		       <p> The mystery genre is a genre of fiction that follows a crime (like a murder or a disappearance) from the moment it is committed to the moment it is solved. Most mysteries feature a detective or private eye solving a case as the central character.
+		       </p>
 		    </div>
 		    <div className=" bg-white shadow-md rounded-md w-24 md:w-40">
 		       <div className="w-full h-32">
@@ -26,4 +27,4 @@ const Humor=()=>{
 	);
 }
 
-export default Humor;
+export default Mystry;

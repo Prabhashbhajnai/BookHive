@@ -1,11 +1,12 @@
 import React from "react";
 import {BsBook} from "react-icons/bs";
 
-const Humor=()=>{
+const Fable=()=>{
 	return(
 		<>
 		    <div className="pb-6">
-		       <p>Comedy may be divided into multiple genres based on the source of humor, the method of delivery, and the context in which it is delivered. These classifications overlap, and most comedians can fit into multiple genres. </p>
+		       <p> Fable is a literary genre: a succinct fictional story, in prose or verse, that features animals, legendary creatures, plants, inanimate objects, or forces of nature that are anthropomorphized, and that illustrates or leads to a particular moral lesson (a "moral"), which may at the end be added explicitly as a concise maxim or saying.
+		       </p>
 		    </div>
 		    <div className=" bg-white shadow-md rounded-md w-24 md:w-40">
 		       <div className="w-full h-32">
@@ -26,4 +27,4 @@ const Humor=()=>{
 	);
 }
 
-export default Humor;
+export default Fable;

@@ -1,11 +1,11 @@
 import React from "react";
 import {BsBook} from "react-icons/bs";
 
-const Humor=()=>{
+const Fiction=()=>{
 	return(
 		<>
 		    <div className="pb-6">
-		       <p>Comedy may be divided into multiple genres based on the source of humor, the method of delivery, and the context in which it is delivered. These classifications overlap, and most comedians can fit into multiple genres. </p>
+		       <p>Genre fiction is a type of novel that has a more mainstream, populist appeal than literary fiction. Genre fiction traditionally comprises genres such as romance, mystery, thriller, horror, fantasy, and children's books. </p>
 		    </div>
 		    <div className=" bg-white shadow-md rounded-md w-24 md:w-40">
 		       <div className="w-full h-32">
@@ -26,4 +26,4 @@ const Humor=()=>{
 	);
 }
 
-export default Humor;
+export default Fiction;

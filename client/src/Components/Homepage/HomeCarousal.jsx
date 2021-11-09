@@ -35,7 +35,7 @@ const HomeCarousal = () => {
         infinite: true,
         speed: 500,
         slodesToShow: 4,
-        slidesToScroll: 4,
+        slidesToScroll: 1,
         nextArrow: <NextArrow />,
         prevArrow: <PrevArrow />,
     };

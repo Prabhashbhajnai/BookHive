@@ -6,7 +6,8 @@ To use this repository
 > * npm i express --> in the server folder
 > * npm run dev --> in the server folder to run the backend server
 > For Frontend
-> * npm install --> in the server folder
+> * npm install --> in the client folder
+> * npm start --> in the client folder to run the frontend server
 
 ## Authors
 * [@Prabhashbhajnai](https://github.com/Prabhashbhajnai)

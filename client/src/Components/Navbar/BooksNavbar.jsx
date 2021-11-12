@@ -8,7 +8,7 @@ const MobileNav = () => {
     return (
     <div className="flex w-full items-center justify-between lg:hidden">
         <AiOutlineArrowLeft/>
-        <Link to={"/:type"}>
+        <Link to={"/"}>
        <div className="w-28 h-16"> 
             <img src="https://www.boxfordlibrary.org/wordpress/wp-content/uploads/2014/03/elibrary-logo.png"  
             alt="logo"
@@ -33,7 +33,7 @@ const LargeNav = () => {
       <>
       <div className=" container px-20 mx-auto">
         <div className="hidden w-full items-center justify-around lg:flex gap-5 ">
-        <Link to={"/:type"}>
+        <Link to={"/"}>
         <div className="w-28 h-16">
             <img 
             src="https://www.boxfordlibrary.org/wordpress/wp-content/uploads/2014/03/elibrary-logo.png"  

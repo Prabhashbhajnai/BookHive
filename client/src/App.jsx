@@ -44,7 +44,7 @@ function App() {
           <Redirect to="/books/:id/humor" />
         </Route>
 
-        <Route path="/books/:id/*">
+        <Route path="/books/:id/humor">
           <BooksLayoutHOC component={Humor} />
         </Route>
         <Route path="/books/:id/fiction">

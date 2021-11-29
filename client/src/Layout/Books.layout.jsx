@@ -4,6 +4,7 @@ import React from 'react';
 import BooksNavbar from "../Components/Navbar/BooksNavbar";
 import Image from "../Components/Books/Image";
 import TabContainer from "../Components/Books/Tabs";
+
 const BooksLayout=(props)=>{
 	return(
 		<>

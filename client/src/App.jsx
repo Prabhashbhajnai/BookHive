@@ -1,17 +1,16 @@
-// import { Route, Redirect } from "react-router-dom";
 import {
   BrowserRouter as Router,
   Route,
-  Link,
   Switch,
   Redirect,
-  useLocation
 } from "react-router-dom";
 
 //HOC
 import HomeLayoutHOC from "./HOC/Home.Hoc";
 import BooksLayoutHOC from "./HOC/Books.HOC";
 import NewspaperLayoutHOC from "./HOC/Newspaper.HOC";
+import IndividualBookLayoutHOC from "./HOC/IndividualBook.HOC";
+
 // Component
 import Temp from "./Components/temp";
 import Homepage from "./Components/Homepage";
@@ -36,7 +35,7 @@ function App() {
     <>
 
       <Switch>
-        <Route exact path="/">
+        {/* <Route exact path="/">
           <HomeLayoutHOC component={Homepage} />
         </Route>
 
@@ -76,21 +75,14 @@ function App() {
         </Route>
         <Route path="/books/:id/poem">
           <BooksLayoutHOC component={Poetry} />
-        </Route>
+        </Route> */}
 
         <Route path="/newspaper">
           <NewspaperLayoutHOC component={Newspaper} />
         </Route>
-        <Route path="*">
-          Not found
-        </Route>
       </Switch>
 
-
-   
-      {/* <NewspaperLayoutHOC path="/newspaper" exact component={Newspaper} /> */}
-
-      {/* <Route path="/" exact>
+      <Route path="/" exact>
         <Redirect to="/:type" />
       </Route>
       <Route path="/books/:id" exact>
@@ -108,10 +100,9 @@ function App() {
       <BooksLayoutHOC path="/books/:id/fable" exact component={Fable} />
       <BooksLayoutHOC path="/books/:id/horror" exact component={Horror} />
       <BooksLayoutHOC path="/books/:id/s-story" exact component={ShortStory} />
-      <BooksLayoutHOC path="/books/:id/poem" exact component={Poetry} /> */}
+      <BooksLayoutHOC path="/books/:id/poem" exact component={Poetry} />
 
-
-
+      <IndividualBookLayoutHOC path="/books/indibook/:id" exact component={Temp} />
     </>
   );
 }

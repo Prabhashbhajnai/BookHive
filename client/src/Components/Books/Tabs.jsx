@@ -5,7 +5,7 @@ import {useLocation, Link, useParams} from "react-router-dom";
 const Tab=(props)=>{
 	const {id}=useParams()
 	return(
-       <Link to={`/books/${id}/${props.route}`}>
+       <Link to={`/books/${props.route}`}>
 
            <div className={classnames("text-gray-500 font-light", {"text-Library-400 font-semibold":props.isActive,})}>
            	  <h3 className="text-lg md:text-1xl">{props.title}</h3>

@@ -82,27 +82,24 @@ function App() {
         </Route>
       </Switch>
 
-      <Route path="/" exact>
-        <Redirect to="/:type" />
+      <Route path="/books" exact>
+        <Redirect to="/books/humor" />
       </Route>
-      <Route path="/books/:id" exact>
-        <Redirect to="/books/:id/humor" />
-      </Route>
-      <HomeLayoutHOC path="/:type" exact component={Homepage} />
+      <HomeLayoutHOC path="/" exact component={Homepage} />
 
-      <BooksLayoutHOC path="/books/:id/humor" exact component={Humor} />
-      <BooksLayoutHOC path="/books/:id/fiction" exact component={Fiction} />
-      <BooksLayoutHOC path="/books/:id/science-fic" exact component={ScFi} />
-      <BooksLayoutHOC path="/books/:id/romance" exact component={Romance} />
-      <BooksLayoutHOC path="/books/:id/science-tech" exact component={ScTech} />
-      <BooksLayoutHOC path="/books/:id/mystry" exact component={Mystry} />
-      <BooksLayoutHOC path="/books/:id/bio-auto-graphy" exact component={BioAuto} />
-      <BooksLayoutHOC path="/books/:id/fable" exact component={Fable} />
-      <BooksLayoutHOC path="/books/:id/horror" exact component={Horror} />
-      <BooksLayoutHOC path="/books/:id/s-story" exact component={ShortStory} />
-      <BooksLayoutHOC path="/books/:id/poem" exact component={Poetry} />
+      <BooksLayoutHOC path="/books/humor" exact component={Humor} />
+      <BooksLayoutHOC path="/books/fiction" exact component={Fiction} />
+      <BooksLayoutHOC path="/books/science-fic" exact component={ScFi} />
+      <BooksLayoutHOC path="/books/romance" exact component={Romance} />
+      <BooksLayoutHOC path="/books/science-tech" exact component={ScTech} />
+      <BooksLayoutHOC path="/books/mystry" exact component={Mystry} />
+      <BooksLayoutHOC path="/books/bio-auto-graphy" exact component={BioAuto} />
+      <BooksLayoutHOC path="/books/fable" exact component={Fable} />
+      <BooksLayoutHOC path="/books/horror" exact component={Horror} />
+      <BooksLayoutHOC path="/books/s-story" exact component={ShortStory} />
+      <BooksLayoutHOC path="/books/poem" exact component={Poetry} />
 
-      <IndividualBookLayoutHOC path="/books/indibook/:id" exact component={Temp} />
+      <IndividualBookLayoutHOC path="/books/:id" exact component={Temp} />
     </>
   );
 }

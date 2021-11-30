@@ -3,7 +3,7 @@ import React from 'react';
 // components
 import Navbar from '../Components/Navbar';
 import IndividualBook from '../Components/Individual Book/IndividualBook';
-const IndividualBookLayout = () => {
+const IndividualBookLayout = (props) => {
     return (
         <>
             <Navbar />
@@ -18,6 +18,7 @@ const IndividualBookLayout = () => {
                     date={"29-Nov-21"}
                     isbn={123456789}
                 />
+                <div>{props.children}</div>
             </div>
         </>
     );

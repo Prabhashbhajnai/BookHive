@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 const SourcesCard = (props) => {
     return (
-        <Link to={`/${props.name}/${props._id}`} className="w-full md:w-1/3 lg:w-1/4 pt-5">
+        <Link to={`/${props.name}`} className="w-full md:w-1/3 lg:w-1/4 pt-5">
             <div className="bg-white p-4 w-full mb-4 rounded-2xl transition duration-700 ease-in-out hover:shadow-lg transform transition duration-1000 hover:scale-105 overflow-hidden ">
                 <div className="w-full h-56 lg:64 relative">
                     <div className="absolute w-full bottom-4 flex items-end justify-between">

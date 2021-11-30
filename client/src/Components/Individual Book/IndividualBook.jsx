@@ -58,19 +58,22 @@ const IndividualBook = (props) => {
                         </div>
                     </div>
 
-                    <p className='text-lg'>{props.description}</p>
+                    <div className='overflow-y-scroll h-34 scrollbar-hide'>
+                        <p className='text-lg mt-5'>{props.description}</p>
 
-                    <div className='mt-5 text-lg'>
-                        <p><span className='text-gray-500'>Author: </span>{props.author}</p>
-                        <p><span className='text-gray-500'>Publisher: </span>{props.publisher}</p>
-                        <p><span className='text-gray-500'>Published date: </span>{props.date}</p>
-                        <p><span className='text-gray-500'>ISBN: </span>{props.isbn}</p>
+                        <div className='mt-5 text-lg'>
+                            <p><span className='text-gray-500'>Author: </span>{props.author}</p>
+                            <p><span className='text-gray-500'>Publisher: </span>{props.publisher}</p>
+                            <p><span className='text-gray-500'>Published date: </span>{props.date}</p>
+                            <p><span className='text-gray-500'>ISBN: </span>{props.isbn}</p>
+                        </div>
+
+                        <div className='mt-5'>
+                            <h2 className='text-2xl font-semibold'>About {props.author}</h2>
+                            <p className='text-lg'>{props.authorAbout}</p>
+                        </div>
                     </div>
 
-                    <div className='mt-5'>
-                        <h2 className='text-2xl font-semibold'>About {props.author}</h2>
-                        <p className='text-lg'>{props.authorAbout}</p>
-                    </div>
                 </div>
             </div>
         </div>

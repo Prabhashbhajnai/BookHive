@@ -82,6 +82,7 @@ const SpecificBook = () => {
                 </div>
                 <div className='mt-6'>
                     <h4 className="text-xl font-medium">What the readers have to say</h4>
+                    <button className='lg:hidden flex flex-wrap items-center text-Library-400'>Write a Review <MdArrowRight className='text-lg' /></button>
                     <div className='flex gap-5'>
                         <div>
                             <ReviewCard />
@@ -90,7 +91,7 @@ const SpecificBook = () => {
                         </div>
                         <aside
                             style={{ height: "fit-content" }}
-                            className="hidden md:flex md:w-4/12 sticky rounded-xl fixed top-2 bg-white p-3 shadow-md flex flex-col gap-4"
+                            className="hidden lg:flex lg:w-4/12 sticky rounded-xl fixed top-2 bg-white p-3 shadow-md flex flex-col gap-4"
                         >
                             <button className='flex flex-wrap items-center text-Library-400'>Write a Review <MdArrowRight className='text-lg' /></button>
                         </aside>

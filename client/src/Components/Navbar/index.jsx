@@ -1,16 +1,19 @@
 import React from 'react';
 import {FaUserAlt} from "react-icons/fa";
 import {RiSearch2Line} from "react-icons/ri";
+import {Link} from "react-router-dom";
 
 const MobileNav = () => {
     return (
     <div className="flex w-full items-center justify-between lg:hidden">
-       <div className="w-28 h-16">
-            <img src="https://www.boxfordlibrary.org/wordpress/wp-content/uploads/2014/03/elibrary-logo.png"  
-            alt="logo"
-            className="w-full h-full"
-            />
-        </div>
+        <Link to={"/"}>
+            <div className="w-28 h-16">
+                <img src="https://www.boxfordlibrary.org/wordpress/wp-content/uploads/2014/03/elibrary-logo.png"  
+                alt="logo"
+                className="w-full h-full"
+                />
+            </div>
+        </Link>
         <div className="flex items-center gap-3">
             <button className="bg-Library-400  text-white py-2 px-3 rounded-full">
                 UseApp
@@ -28,13 +31,15 @@ const LargeNav = () => {
       <>
       <div className=" container px-20 mx-auto">
         <div className="hidden w-full items-center justify-around lg:flex gap-5 ">
-        <div className="w-28 h-16">
-            <img 
-            src="https://www.boxfordlibrary.org/wordpress/wp-content/uploads/2014/03/elibrary-logo.png"  
-            alt="logo"
-            className="w-full h-full"
-            />
-        </div>
+            <Link to={"/"}>
+                <div className="w-28 h-16">
+                    <img 
+                    src="https://www.boxfordlibrary.org/wordpress/wp-content/uploads/2014/03/elibrary-logo.png"  
+                    alt="logo"
+                    className="w-full h-full"
+                    />
+                </div>
+            </Link>
         <div className="w-3/4 mr-40 bg-white shadow-md p-3 border border-gray-200 rounded">
            <div className="flex  items-center gap-2 ">
                <RiSearch2Line />

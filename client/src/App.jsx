@@ -10,6 +10,7 @@ import HomeLayoutHOC from "./HOC/Home.Hoc";
 import BooksLayoutHOC from "./HOC/Books.HOC";
 import NewspaperLayoutHOC from "./HOC/Newspaper.HOC";
 import IndividualBookLayoutHOC from "./HOC/IndividualBook.HOC";
+import TeachersLayoutHOC from "./HOC/Teachers.HOC";
 
 // Component
 import Temp from "./Components/temp";
@@ -30,6 +31,7 @@ import ShortStory from "./Page/BooksType/ShortStory";
 import Poetry from "./Page/BooksType/Poetry";
 import Romance from "./Page/BooksType/Romance";
 import SpecificBook from "./Page/SpecificBook/SpecificBook";
+import Teachers from "./Page/Teachers";
 
 function App() {
   return (
@@ -59,6 +61,8 @@ function App() {
       <BooksLayoutHOC path="/books/poem" exact component={Poetry} />
 
       <IndividualBookLayoutHOC path="/books/category/:id" exact component={SpecificBook} />
+
+      <TeachersLayoutHOC path="/quespaper" exact component={Teachers} />
     </>
   );
 }

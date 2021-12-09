@@ -11,6 +11,7 @@ import BooksLayoutHOC from "./HOC/Books.HOC";
 import NewspaperLayoutHOC from "./HOC/Newspaper.HOC";
 import IndividualBookLayoutHOC from "./HOC/IndividualBook.HOC";
 import TeachersLayoutHOC from "./HOC/Teachers.HOC";
+import QuestionPaperLayoutHOC from "./HOC/QuestionPaper.HOC";
 
 // Component
 import Temp from "./Components/temp";
@@ -63,6 +64,8 @@ function App() {
       <IndividualBookLayoutHOC path="/books/category/:id" exact component={SpecificBook} />
 
       <TeachersLayoutHOC path="/quespaper" exact component={Teachers} />
+
+      <QuestionPaperLayoutHOC path="/quespaper/teacher/:id" exact component={Temp} />
     </>
   );
 }

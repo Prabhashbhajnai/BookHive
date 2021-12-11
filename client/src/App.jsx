@@ -12,6 +12,7 @@ import NewspaperLayoutHOC from "./HOC/Newspaper.HOC";
 import IndividualBookLayoutHOC from "./HOC/IndividualBook.HOC";
 import TeachersLayoutHOC from "./HOC/Teachers.HOC";
 import QuestionPaperLayoutHOC from "./HOC/QuestionPaper.HOC";
+import PdfLayoutHOC from "./HOC/Pdf.HOC";
 
 // Component
 import Temp from "./Components/temp";
@@ -62,10 +63,13 @@ function App() {
       <BooksLayoutHOC path="/books/poem" exact component={Poetry} />
 
       <IndividualBookLayoutHOC path="/books/category/:id" exact component={SpecificBook} />
+      <PdfLayoutHOC path="/pdf/:id" exact component={Temp} />
 
       <TeachersLayoutHOC path="/quespaper" exact component={Teachers} />
 
       <QuestionPaperLayoutHOC path="/quespaper/teacher/:id" exact component={Temp} />
+      <QuestionPaperLayoutHOC path="/quespaper/teacher/:id/termend" exact component={Temp} />
+      <QuestionPaperLayoutHOC path="/quespaper/teacher/:id/midsem" exact component={Temp} />
     </>
   );
 }

@@ -17,6 +17,7 @@ const IndividualBookLayout = (props) => {
                     publisher={"Publisher"}
                     date={"29-Nov-21"}
                     isbn={123456789}
+                    location={"https://zomatocloneprabhash.s3.ap-south-1.amazonaws.com/CGPA+to+Percentage+of+Marks+Conversion+VIT+Bhopal.pdf"}
                 />
                 <div>{props.children}</div>
             </div>

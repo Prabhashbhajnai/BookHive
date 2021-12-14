@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 
 // components
 import Buttons from './Buttons';
@@ -33,7 +34,9 @@ const IndividualBook = (props) => {
 
                 <div className='flex flex-wrap gap-3 mt-5'>
                     <Buttons isActive>Issue</Buttons>
-                    <Buttons isActive>Read Online</Buttons>
+                    <a href={props.location} target="_blank" >
+                        <Buttons isActive>Read Online</Buttons>
+                    </a>
                 </div>
             </div>
 
@@ -54,7 +57,9 @@ const IndividualBook = (props) => {
                         </div>
                         <div className='flex gap-3'>
                             <Buttons isActive>Issue</Buttons>
-                            <Buttons isActive>Read Online</Buttons>
+                            <a href={props.location} target="_blank" >
+                                <Buttons isActive>Read Online</Buttons>
+                            </a>
                         </div>
                     </div>
 

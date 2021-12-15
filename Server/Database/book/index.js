@@ -10,7 +10,8 @@ const BookSchema = new mongoose.Schema(
         author: {type: String, required: true},             
         publication: {type: String, required: true},
         category: [String],
-        location: {type: String, required: true}
+        location: {type: String, required: true},
+        reviews: [{type: mongoose.Types.ObjectId, ref: "Reviews"}],
     },
     {
         timestamps: true,

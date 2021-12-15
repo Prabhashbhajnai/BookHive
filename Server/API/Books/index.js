@@ -1,11 +1,20 @@
 // Libraries
 import express from "express";
 import passport from "passport";
+import multer from "multer";
 
 // Database Model
-import {BookModel} from "../../Database/allModels";
+import { BookModel } from "../../Database/allModels";
+
+// Utilities
+import { s3Upload } from "../../Utils/s3";
 
 const Router = express.Router();
+
+// Multer Config
+const storage = multer.memoryStorage();
+const upload = multer({ storage });
+
 
 /* 
     Route:          /
@@ -16,12 +25,12 @@ const Router = express.Router();
 */
 Router.get("/", async (req, res) => {
     try {
-        const {category} = req.query;
-        const books = await BookModel.find({category});
+        const { category } = req.query;
+        const books = await BookModel.find({ category });
 
-        return res.json({books});
+        return res.json({ books });
     } catch (error) {
-        return res.status(500).json({error: error.message});
+        return res.status(500).json({ error: error.message });
     }
 });
 
@@ -34,30 +43,30 @@ Router.get("/", async (req, res) => {
 */
 Router.get("/:_id", async (req, res) => {
     try {
-        const {_id} = req.params;
-        const book = await BookModel.findOne(_id);
-        if(!book) 
-            return res.statusMessage(404).json({error: "Book Not Found"});
-       
-        return res.json({book});
+        const { _id } = req.params;
+        const books = await BookModel.findById(_id);
+        if (!books)
+            return res.status(404).json({ error: "Book Not Found" });
+
+        return res.json({ books });
     } catch (error) {
-        return res.statusMessage(500).json({error: error.message});  
+        return res.status(500).json({ error: error.message });
     }
 });
 
 /* 
     Route:          /new
-    Description:    add new restaurant
+    Description:    add new book
     Params:         none
     Access:         Private
     Method :        POST
 */
 Router.post("/new", passport.authenticate("jwt"), async (req, res) => {
     try {
-      const newBook = await BookModel.create(req.body.bookData);
-      return res.json({ Book: newBook });
+        const newBook = await BookModel.create(req.body.bookData);
+        return res.json({ Books: newBook });
     } catch (error) {
-      return res.status(500).json({ error: error.message });
+        return res.status(500).json({ error: error.message });
     }
 });
 

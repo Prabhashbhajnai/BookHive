@@ -24,12 +24,6 @@ import Humor from "./Page/BooksType/Humor";
 import Fiction from "./Page/BooksType/Fiction";
 import ScFi from "./Page/BooksType/ScFi";
 import ScTech from "./Page/BooksType/ScTech";
-import Mystry from "./Page/BooksType/Mystry";
-import BioAuto from "./Page/BooksType/BioAuto";
-import Fable from "./Page/BooksType/Fable";
-import Horror from "./Page/BooksType/Horror";
-import ShortStory from "./Page/BooksType/ShortStory";
-import Poetry from "./Page/BooksType/Poetry";
 import Romance from "./Page/BooksType/Romance";
 import SpecificBook from "./Page/SpecificBook/SpecificBook";
 import Teachers from "./Page/Teachers";
@@ -54,12 +48,6 @@ function App() {
       <BooksLayoutHOC path="/books/science-fic" exact component={ScFi} />
       <BooksLayoutHOC path="/books/romance" exact component={Romance} />
       <BooksLayoutHOC path="/books/science-tech" exact component={ScTech} />
-      <BooksLayoutHOC path="/books/mystry" exact component={Mystry} />
-      <BooksLayoutHOC path="/books/bio-auto-graphy" exact component={BioAuto} />
-      <BooksLayoutHOC path="/books/fable" exact component={Fable} />
-      <BooksLayoutHOC path="/books/horror" exact component={Horror} />
-      <BooksLayoutHOC path="/books/s-story" exact component={ShortStory} />
-      <BooksLayoutHOC path="/books/poem" exact component={Poetry} />
 
       <IndividualBookLayoutHOC path="/books/category/:id" exact component={SpecificBook} />
 

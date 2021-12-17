@@ -44,39 +44,7 @@ const TabContainer=(props)=>{
      	title:"Science & technology",
      	route:"science-tech",
      	isActive:currentPath.includes("science-tech"),
-     },
-     {
-     	title:"Mystry",
-     	route:"mystry",
-     	isActive:currentPath.includes("mystry"),
-     },
-     
-     {
-     	title:"Biography/Autobiography",
-     	route:"bio-auto-graphy",
-     	isActive:currentPath.includes("bio-auto-graphy"),
-     },
-      
-     {
-     	title:"Fable",
-     	route:"fable",
-     	isActive:currentPath.includes("fable"),
-     },
-     {
-     	title:"Horror",
-     	route:"horror",
-     	isActive:currentPath.includes("horror"),
-     },
-     {
-     	title:"Short Stories",
-     	route:"s-story",
-     	isActive:currentPath.includes("s-story"),
-     },
-     {
-     	title:"Poetry",
-     	route:"poem",
-     	isActive:currentPath.includes("poem"),
-     },
+     }
      ];
 	return(
        <>

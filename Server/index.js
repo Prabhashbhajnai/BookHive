@@ -13,7 +13,8 @@ import googleAuthConfig from "./config/google.config";
 // microservice routes
 import Auth from "./API/Auth";
 import Books from "./API/Books";
-import Bookupload from "./API/S3upload"
+import Bookupload from "./API/S3upload";
+import Teachers from "./API/Teacher";
 
 // Database connection
 import ConnectDB from "./Database/connection";
@@ -35,6 +36,7 @@ googleAuthConfig(passport);
 elibrary.use("/auth", Auth);
 elibrary.use("/books", Books);
 elibrary.use("/upload", Bookupload);
+elibrary.use("/teachers", Teachers);
 
 elibrary.get("/", (req, res) => res.json({message: "Setup Success"}));
 

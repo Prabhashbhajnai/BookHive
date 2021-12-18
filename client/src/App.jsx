@@ -20,7 +20,7 @@ import Newspaper from "./Components/Newspaper";
 
 //page
 import Books from "./Page/Books";
-import Humor from "./Page/BooksType/Humor";
+import TextBook from "./Page/BooksType/Textbook";
 import Fiction from "./Page/BooksType/Fiction";
 import ScFi from "./Page/BooksType/ScFi";
 import ScTech from "./Page/BooksType/ScTech";
@@ -43,7 +43,7 @@ function App() {
       </Route>
       <HomeLayoutHOC path="/" exact component={Homepage} />
 
-      <BooksLayoutHOC path="/books/humor" exact component={Humor} />
+      <BooksLayoutHOC path="/books/textbook" exact component={TextBook} />
       <BooksLayoutHOC path="/books/fiction" exact component={Fiction} />
       <BooksLayoutHOC path="/books/science-fic" exact component={ScFi} />
       <BooksLayoutHOC path="/books/romance" exact component={Romance} />

@@ -21,9 +21,9 @@ const TabContainer=(props)=>{
 	const currentPath=location.pathname;
      const tabs=[
      {
-     	title:"Humor",
-     	route:"humor",
-     	isActive:currentPath.includes("humor"),
+     	title:"Text-Book",
+     	route:"textbook",
+     	isActive:currentPath.includes("textbook"),
      },
      {
      	title:"Fiction",

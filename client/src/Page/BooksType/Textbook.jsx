@@ -1,17 +1,17 @@
 import React, { useState, useEffect } from "react";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux"
 
 // components
 import BookCard from "../../Components/Books/BookCard";
 
-// redux action
-import { getScitech } from "../../Redux/Reducer/book/book.action";
+// redux actions
+import { getTextbook } from "../../Redux/Reducer/book/book.action";
 
-const ScTech = () => {
+const TextBook = () => {
 	const dispatch = useDispatch();
 
 	useEffect(() => {
-		dispatch(getScitech());
+		dispatch(getTextbook());
 	}, [])
 
 	const [bookList, setBookList] = useState([]);
@@ -32,6 +32,6 @@ const ScTech = () => {
 			</div>
 		</>
 	);
-};
+}
 
-export default ScTech;
+export default TextBook;

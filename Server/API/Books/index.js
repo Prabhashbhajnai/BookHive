@@ -25,8 +25,8 @@ const upload = multer({ storage });
 */
 Router.get("/", async (req, res) => {
     try {
-        const { category } = req.query;
-        const books = await BookModel.find({ category });
+        const { genre } = req.query;
+        const books = await BookModel.find({ genre });
 
         return res.json({ books });
     } catch (error) {

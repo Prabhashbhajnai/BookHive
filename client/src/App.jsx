@@ -18,6 +18,9 @@ import Temp from "./Components/temp";
 import Homepage from "./Components/Homepage";
 import Newspaper from "./Components/Newspaper";
 
+// Redirects
+import RedirectTeacher from "./Components/Teachers/Redirect";
+
 //page
 import Books from "./Page/Books";
 import TextBook from "./Page/BooksType/Textbook";
@@ -53,7 +56,7 @@ function App() {
 
       <TeachersLayoutHOC path="/quespaper" exact component={Teachers} />
 
-      <QuestionPaperLayoutHOC path="/quespaper/teacher/:id" exact component={Temp} />
+      <QuestionPaperLayoutHOC path="/quespaper/teacher/:id" exact component={RedirectTeacher} />
       <QuestionPaperLayoutHOC path="/quespaper/teacher/:id/termend" exact component={Temp} />
       <QuestionPaperLayoutHOC path="/quespaper/teacher/:id/midsem" exact component={Temp} />
     </>

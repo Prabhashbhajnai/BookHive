@@ -39,7 +39,7 @@ function App() {
       </Switch>
 
       <Route path="/books" exact>
-        <Redirect to="/books/humor" />
+        <Redirect to="/books/textbook" />
       </Route>
       <HomeLayoutHOC path="/" exact component={Homepage} />
 

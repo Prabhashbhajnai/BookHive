@@ -1,8 +1,9 @@
 import React from 'react';
+import { Link } from 'react-router-dom'
 
 const BookCard = (props) => {
     return (
-        <>
+        <Link to={`/books/category/${props._id}`}>
             <div className=" bg-white shadow-lg rounded-xl w-24 md:w-56 transform transition duration-1000 hover:scale-105">
                 <div className="w-full h-32">
                     <img
@@ -20,7 +21,7 @@ const BookCard = (props) => {
                     </div>
                 </div>
             </div>
-        </>
+        </Link>
     );
 };
 

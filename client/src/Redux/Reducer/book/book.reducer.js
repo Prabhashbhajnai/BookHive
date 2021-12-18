@@ -1,7 +1,8 @@
-import { GET_BOOK } from "./book.type";
+import { GET_BOOK, GET_SPECIFIC_BOOK } from "./book.type";
 
 const INITIAL_STATE = {
     books: [],
+    selectedBook: {},
 };
 
 const bookReducer = (state = INITIAL_STATE, action) => {
@@ -10,6 +11,12 @@ const bookReducer = (state = INITIAL_STATE, action) => {
             return {
                 ...state,
                 books: action.payload,
+            };
+        
+        case GET_SPECIFIC_BOOK:
+            return {
+                ...state,
+                selectedBooks: action.payload,
             };
 
         default:

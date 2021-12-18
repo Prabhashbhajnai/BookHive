@@ -10,7 +10,7 @@ const IndividualBook = (props) => {
             <div className='w-full md:hidden'>
                 <div className=' border-b-2 scrollbar-hide'>
                     <h1 className='font-semibold text-2xl'>{props.title}</h1>
-                    <h6>(Author)</h6>
+                    <h6>{props.author}</h6>
                 </div>
                 <img
                     src={props.image}
@@ -29,7 +29,7 @@ const IndividualBook = (props) => {
 
                 <div className='mt-5'>
                     <h2 className='text-2xl font-semibold'>About {props.author}</h2>
-                    <p>{props.authorAbout}</p>
+                    <p>{props.aboutAuthor}</p>
                 </div>
 
                 <div className='flex flex-wrap gap-3 mt-5'>
@@ -53,7 +53,7 @@ const IndividualBook = (props) => {
                     <div className='flex items-center justify-between border-b-2 scrollbar-hide'>
                         <div>
                             <h1 className='text-4xl font-semibold'>{props.title}</h1>
-                            <h6>(Author)</h6>
+                            <h6>({props.author})</h6>
                         </div>
                         <div className='flex gap-3'>
                             <Buttons isActive>Issue</Buttons>

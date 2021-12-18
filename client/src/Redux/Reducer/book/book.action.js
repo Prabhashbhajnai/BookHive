@@ -1,7 +1,7 @@
 import axios from "axios";
 
 // Redux types
-import { GET_BOOK } from "./book.type";
+import { GET_BOOK, GET_SPECIFIC_BOOK } from "./book.type";
 
 export const getTextbook = () => async (dispatch) => {
     try {
@@ -63,6 +63,19 @@ export const getScitech = () => async (dispatch) => {
         });
 
         return dispatch({ type: GET_BOOK, payload: bookList.data });
+    } catch (error) {
+        return dispatch({ type: "ERROR", payload: error });
+    }
+};
+
+export const getSpecificBook = (_id) => async (dispatch) => {
+    try {
+        const book = await axios({
+            method: "GET",
+            url: `http://localhost:4000/books/${_id}`,
+        });
+
+        return dispatch({ type: GET_SPECIFIC_BOOK, payload: book.data });
     } catch (error) {
         return dispatch({ type: "ERROR", payload: error });
     }

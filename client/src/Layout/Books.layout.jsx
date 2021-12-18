@@ -10,7 +10,7 @@ const BooksLayout=(props)=>{
 		<>
 		{" "}
 		<BooksNavbar />
-	    <div className="container mx-auto px-4 lg:px-20">
+	    <div className="container mx-auto py-10 px-4 lg:px-20">
 	    	<Image />
 	    	<div className="my-4">
 	    	<TabContainer />

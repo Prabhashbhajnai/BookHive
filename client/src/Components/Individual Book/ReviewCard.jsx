@@ -1,6 +1,20 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import dayjs from 'dayjs';
 
-const ReviewCard = () => {
+// redux action
+import { getUser } from '../../Redux/Reducer/user/user.action';
+
+const ReviewCard = (props) => {
+    const [user, setUser] = useState({});
+    const dispatch = useDispatch();
+
+    useEffect(() => {
+        dispatch(getUser(props.user)).then((data) =>
+            setUser(data.payload.user)
+        );
+    }, []);
+
     return (
         <>
             <div className="my-3 flex flex-col gap-3">
@@ -14,14 +28,15 @@ const ReviewCard = () => {
                             />
                         </div>
                         <div className="flex flex-col">
-                            <h3 className="text-lg font-semibold">User Name</h3>
+                            <h3 className="text-lg font-semibold">{user?.fullname}</h3>
+                            <small className="text-gray-500">{dayjs(props.createdAt).format("DD MMM YYYY")}</small>
                         </div>
                     </div>
                 </div>
                 <div className="flex flex-col gap-3">
                     <div className="w-full">
                         <p className="w-full text-gray-800 font-light text-base">
-                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odit dolores quidem odio eos, vel tenetur excepturi aperiam dolor qui quas quo id esse similique, sequi labore a, placeat accusamus! Tempora.       
+                            {props.reviewText}
                         </p>
                     </div>
                 </div>

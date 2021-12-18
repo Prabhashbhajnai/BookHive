@@ -29,7 +29,7 @@ const IndividualBook = (props) => {
 
                 <div className='mt-5'>
                     <h2 className='text-2xl font-semibold'>About {props.author}</h2>
-                    <p>{props.aboutAuthor}</p>
+                    <p>{props.authorAbout}</p>
                 </div>
 
                 <div className='flex flex-wrap gap-3 mt-5'>
@@ -55,7 +55,7 @@ const IndividualBook = (props) => {
                             <h1 className='text-4xl font-semibold'>{props.title}</h1>
                             <h6>({props.author})</h6>
                         </div>
-                        <div className='flex gap-3'>
+                        <div className='flex w-1/3 gap-3'>
                             <Buttons isActive>Issue</Buttons>
                             <a href={props.location} target="_blank" >
                                 <Buttons isActive>Read Online</Buttons>

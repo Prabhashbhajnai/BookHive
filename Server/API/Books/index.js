@@ -61,7 +61,7 @@ Router.get("/:_id", async (req, res) => {
     Access:         Private
     Method :        POST
 */
-Router.post("/new", /*passport.authenticate("jwt"),*/ async (req, res) => {
+Router.post("/new", passport.authenticate("jwt"), async (req, res) => {
     try {
         const newBook = await BookModel.create(req.body.bookData);
         return res.json({ books: newBook });

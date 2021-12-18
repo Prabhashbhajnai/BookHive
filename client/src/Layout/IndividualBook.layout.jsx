@@ -13,11 +13,12 @@ const IndividualBookLayout = (props) => {
     const [book, setBook] = useState({
         photo: "",
         title: "",
-        description: "",
-        author: "",
-        aboutAuthor: "",
-        publisher: "",
-        isbn: "",
+        description: "Not Available",
+        date: "Not Available",
+        author: "Not Available",
+        aboutAuthor: "Not Available",
+        publisher: "Not Available",
+        isbn: "Not Available",
         location: ""
     });
     const { id } = useParams();
@@ -37,14 +38,14 @@ const IndividualBookLayout = (props) => {
             <Navbar />
             <div className="container mx-auto py-10 px-4 lg:px-32">
                 <IndividualBook
-                    image={book?.photo}
-                    title={book?.title}
-                    description={book?.description}
-                    author={book?.author}
-                    authorAbout={book?.aboutAuthor}
-                    publisher={book?.publication}
-                    date={"Not Available"}
-                    isbn={book?.ISBN}
+                    image={book.photo}
+                    title={book.title}
+                    description={book.description}
+                    author={book.author}
+                    authorAbout={book.aboutAuthor}
+                    publisher={book.publication}
+                    date={book.date}
+                    isbn={book.ISBN}
                     location={book?.location}
                 />
                 <div>{props.children}</div>

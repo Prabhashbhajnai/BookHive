@@ -16,7 +16,7 @@ const bookReducer = (state = INITIAL_STATE, action) => {
         case GET_SPECIFIC_BOOK:
             return {
                 ...state,
-                selectedBooks: action.payload,
+                selectedBook: action.payload,
             };
 
         default:

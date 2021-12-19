@@ -7,7 +7,13 @@ import ReviewModal from './ReviewModal';
 const AddReviewCard = () => {
     let [isOpen, setIsOpen] = useState(false);
 
-    const openModal = () => {setIsOpen(true)};
+    const openModal = () => {
+        if(!localStorage.elibraryUser){
+            return alert("Please Sign in to post a review");
+        }
+
+        setIsOpen(true)
+    };
 
     return (
         <>

@@ -17,7 +17,8 @@ import Books from "./API/Books";
 import Bookupload from "./API/S3upload";
 import Teachers from "./API/Teacher";
 import Review from "./API/review";
-import User from "./API/User"
+import User from "./API/User";
+import QuesPaper from "./API/Question paper";
 
 // Database connection
 import ConnectDB from "./Database/connection";
@@ -43,6 +44,7 @@ elibrary.use("/upload", Bookupload);
 elibrary.use("/teachers", Teachers);
 elibrary.use("/reviews", Review);
 elibrary.use("/user", User);
+elibrary.use("/quespaper", QuesPaper);
 
 elibrary.get("/", (req, res) => res.json({message: "Setup Success"}));
 

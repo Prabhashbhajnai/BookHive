@@ -6,10 +6,16 @@ const TeacherSchema = new mongoose.Schema(
         subject: {type: String, required: true},
         designation: {type: String},
         photo: {type: String},
-        papers: [
+        midesem: [
             {
                 type: mongoose.Types.ObjectId,
-                ref: "Quespaper",
+                ref: "Midsem",
+            },
+        ],
+        termend: [
+            {
+                type: mongoose.Types.ObjectId,
+                ref: "Termend",
             }
         ]
     }

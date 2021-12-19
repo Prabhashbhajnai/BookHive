@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import Slider from 'react-slick';
-import { MdArrowRight } from 'react-icons/md';
 import { useDispatch, useSelector } from 'react-redux';
 
 
@@ -8,6 +7,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { NextArrow, PrevArrow } from '../../Components/CarousalArrows';
 import SimilarBooksCard from '../../Components/Individual Book/SimilarBooksCard';
 import ReviewCard from '../../Components/Individual Book/ReviewCard';
+import AddReviewCard from '../../Components/Review/AddReviewCard';
 
 // redux action
 import { getReviews } from '../../Redux/Reducer/review/review.action';
@@ -103,7 +103,9 @@ const SpecificBook = () => {
                 </div>
                 <div className='mt-6'>
                     <h4 className="text-xl font-medium">What the readers have to say</h4>
-                    <button className='lg:hidden flex flex-wrap items-center text-Library-400'>Write a Review <MdArrowRight className='text-lg' /></button>
+                    <div className='lg:hidden'>
+                        <AddReviewCard />
+                    </div>
                     <div className='flex gap-5'>
                         <div>
                             {reviews.map((reviewData) => (
@@ -114,7 +116,7 @@ const SpecificBook = () => {
                             style={{ height: "fit-content" }}
                             className="hidden lg:flex lg:w-4/12 sticky rounded-xl fixed top-2 bg-white p-3 shadow-md flex flex-col gap-4"
                         >
-                            <button className='flex flex-wrap items-center text-Library-400'>Write a Review <MdArrowRight className='text-lg' /></button>
+                            <AddReviewCard />
                         </aside>
                     </div>
                 </div>

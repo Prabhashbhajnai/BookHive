@@ -6,14 +6,14 @@ const TeacherInfo = (props) => {
             <div className='flex h-auto mx-auto md:flex lg:px-20 gap-3 md:gap-10'>
                 <div className='md:hidden h-1/3 w-1/3 mb-5' >
                     <img
-                        src="https://vitbhopal.ac.in/file/2021/06/Dr_Manas_C.jpg"
+                        src={props.photo}
                         alt="teacher"
                         className='w-full h-full rounded-xl'
                     />
                 </div>
                 <div className='hidden md:block h-56 w-1/5 mb-5' >
                     <img
-                        src="https://vitbhopal.ac.in/file/2021/06/Dr_Manas_C.jpg"
+                        src={props.photo}
                         alt="teacher"
                         className='w-full h-full rounded-xl'
                     />

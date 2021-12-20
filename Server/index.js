@@ -19,6 +19,8 @@ import Teachers from "./API/Teacher";
 import Review from "./API/review";
 import User from "./API/User";
 import QuesPaper from "./API/Question paper";
+import Termend from "./API/Termend";
+import Midsem from "./API/Midsem";
 
 // Database connection
 import ConnectDB from "./Database/connection";
@@ -45,6 +47,8 @@ elibrary.use("/teachers", Teachers);
 elibrary.use("/reviews", Review);
 elibrary.use("/user", User);
 elibrary.use("/quespaper", QuesPaper);
+elibrary.use("/midsem", Midsem);
+elibrary.use("/termend", Termend);
 
 elibrary.get("/", (req, res) => res.json({message: "Setup Success"}));
 

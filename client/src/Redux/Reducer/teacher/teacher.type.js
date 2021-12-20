@@ -1,2 +1,2 @@
-export const GET_TEACHER = "GET-TEACHER";
+export const GET_TEACHER = "GET_TEACHER";
 export const GET_SPECIFIC_TEACHER = "GET_SPECIFIC_TEACHER";

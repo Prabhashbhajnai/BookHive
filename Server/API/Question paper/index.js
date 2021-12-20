@@ -24,4 +24,22 @@ Router.post("/new", passport.authenticate("jwt"), async (req, res) => {
     }
 });
 
+/* 
+    Route:          /:_id
+    Description:    Get question paper based on id 
+    Params:         id
+    Access:         Public
+    Method :        GET
+*/
+Router.get("/:_id", async (req, res) => {
+    try {
+        const {_id} = req.params;
+        const papers = await QuespaperModel.findById(_id)
+
+        return res.json({papers});
+    } catch (error) {
+        return res.status(500).json({error: error.message});
+    }
+});
+
 export default Router;

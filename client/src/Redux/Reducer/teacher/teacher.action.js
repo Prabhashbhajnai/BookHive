@@ -23,8 +23,8 @@ export const getSpecificTeacher = (_id) => async (dispatch) => {
             url: `http://localhost:4000/teachers/${_id}`,
         });
 
-        return dispatch({type: GET_SPECIFIC_TEACHER, payload: teacher.data})
+        return dispatch({ type: GET_SPECIFIC_TEACHER, payload: teacher.data });
     } catch (error) {
-        return dispatch({type: "ERROR", payload: error})
+        return dispatch({ type: "ERROR", payload: error });
     }
 };

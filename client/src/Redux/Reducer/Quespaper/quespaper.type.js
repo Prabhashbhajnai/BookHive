@@ -1,0 +1,3 @@
+export const GET_MIDSEM_LIST = "GET_MIDSEM_LIST";
+export const GET_TERMEND_LIST = "GET_TERMEND_LIST";
+export const GET_PAPER = "GET_PAPER";

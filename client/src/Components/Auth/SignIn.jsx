@@ -26,10 +26,14 @@ export default function SignIn({ isOpen, setIsOpen }) {
             email: "",
             password: "",
         });
-        dispatch(signIn(userData))
+        dispatch(signIn(userData));
+        window.setTimeout(function() {
+            window.location.reload()
+         }, 1000);
     };
 
     const googlesignin = () => (window.location.href = "http://localhost:4000/auth/google");
+    const pageReload = () => (window.location.reload());
 
     return (
         <>
@@ -105,9 +109,9 @@ export default function SignIn({ isOpen, setIsOpen }) {
                                                 className="w-full border border-gray-400 px-3 py-2 rounded-lg focus:outline-none focus:border-zomato-400"
                                             />
                                         </div>
-                                        <button onClick={submit} className="w-full text-center bg-Library-400 text-white py-2 rounded-lg">
+                                        <div onClick={submit} className="w-full text-center bg-Library-400 text-white py-2 rounded-lg">
                                             Sign in
-                                        </button>
+                                        </div>
                                     </form>
                                 </div>
                             </div>

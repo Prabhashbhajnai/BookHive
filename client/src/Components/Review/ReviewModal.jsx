@@ -1,11 +1,42 @@
 import { Dialog, Transition } from '@headlessui/react'
-import { Fragment, useState } from 'react'
+import { Fragment, useState } from 'react';
+import { useParams } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
+
+// redux action
+import { postReviews } from '../../Redux/Reducer/review/review.action'
 
 export default function ReviewModal({ isOpen, setIsOpen, ...props }) {
 
     function closeModal() {
         setIsOpen(false)
     }
+
+    const [reviewData, setReviewData] = useState({
+        reviewText: "",
+    });
+
+    const { id } = useParams();
+    const dispatch = useDispatch();
+
+    const handleChange = (e) =>
+        setReviewData(prev => ({ ...prev, [e.target.id]: e.target.value }));
+
+    const submit = () => {
+        dispatch(
+            postReviews({
+                ...reviewData,
+                restaurant: id,
+            })
+        );
+        setReviewData({
+            reviewText: ""
+        });
+        closeModal();
+        window.setTimeout(function () {
+            window.location.reload()
+        }, 1000);
+    };
 
     return (
         <>
@@ -59,6 +90,8 @@ export default function ReviewModal({ isOpen, setIsOpen, ...props }) {
                                                 id="reviewText"
                                                 placeholder="Amazing Book"
                                                 rows="5"
+                                                value={reviewData.reviewText}
+                                                onChange={handleChange}
                                                 className="w-full border border-gray-400 px-3 py-2 rounded-lg focus:outline-none focus:border-zomato-400"
                                             />
                                         </div>
@@ -69,7 +102,7 @@ export default function ReviewModal({ isOpen, setIsOpen, ...props }) {
                                     <button
                                         type="button"
                                         className="inline-flex justify-center px-4 py-2 text-sm font-medium text-blue-900 bg-blue-100 border border-transparent rounded-md hover:bg-blue-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-blue-500"
-                                        onClick={closeModal}
+                                        onClick={submit}
                                     >
                                         Submit
                                     </button>

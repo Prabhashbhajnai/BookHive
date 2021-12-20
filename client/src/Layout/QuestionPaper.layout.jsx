@@ -10,17 +10,19 @@ const QuestionPaperLayout = (props) => {
     return (
         <>
             <Navbar />
-            <TeacherInfo 
+            <TeacherInfo
                 name='Name'
                 subject='Subject'
                 position='Position'
             />
             <MobileTab className='mb-0' />
-            <div className="flex flex-row gap-5 mt-5 container mx-auto px-4 lg:mx-20">
+            <div className="flex flex-row gap-5 mt-5 mx-auto px-4 lg:px-20">
                 <div className='hidden lg:block w-48 h-full'>
-                    <Sidebar/>
+                    <Sidebar />
                 </div>
-                {props.children}
+                <div className="container mx-auto px-4 lg:px-20">
+                    {props.children}
+                </div>
             </div>
         </>
     );

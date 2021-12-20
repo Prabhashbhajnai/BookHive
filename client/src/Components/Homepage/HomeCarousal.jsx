@@ -56,7 +56,7 @@ const HomeCarousal = () => {
 
     <div className="hidden lg:block">
 
-         <Slider {...settings} >
+         <Slider {...settings} className='flex flex-wrap px-32 w-full'>
          {categories.map((books)  => ( 
                <BooksCategory {...books} />
           ))}

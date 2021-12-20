@@ -5,7 +5,7 @@ const SimilarBooksCard = (props) => {
         <>
             <div className="w-48">
                 <div className="bg-white shadow rounded-md">
-                    <div className="w-48 h-48 ">
+                    <div className="h-48 ">
                         <img
                             src={props.image}
                             alt="Book"

@@ -65,8 +65,8 @@ const SpecificBook = () => {
         <>
             <div className="flex flex-col mt-3 md:mt-80">
                 <h4 className='text-2xl font-bold'>Readers who viewed this also viewed</h4>
-                <div className='flex flex-col gap-4 mt-3'>
-                    <Slider {...settings}>
+                <div className='flex flex-col w-full gap-4 mt-3'>
+                    <Slider {...settings} className='flex flex-wrap px-14 w-full'>
                         <SimilarBooksCard
                             image="https://edit.org/images/cat/book-covers-big-2019101610.jpg"
                             title="Book Title"
@@ -107,7 +107,7 @@ const SpecificBook = () => {
                         <AddReviewCard />
                     </div>
                     <div className='flex gap-5'>
-                        <div>
+                        <div className='w-3/4'>
                             {reviews.map((reviewData) => (
                                 <ReviewCard {...reviewData} />
                             ))}

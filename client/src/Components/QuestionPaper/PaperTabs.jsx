@@ -34,7 +34,7 @@ const PaperTabsContainer = (props) => {
 
     return (
         <>
-            <div className='flex flex-col text-right px-3 h-full gap-4 md:gap-4 border-r-2 scrollbar-hide'>
+            <div className='flex flex-col text-right px-3 h-max gap-4 md:gap-4 border-r-2 scrollbar-hide'>
                 {tabs.map((tab) => (
                     <PaperTabs {...tab} key={`123${tab.route}`} />
                 ))}

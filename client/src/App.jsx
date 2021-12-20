@@ -34,6 +34,8 @@ import Romance from "./Page/BooksType/Romance";
 import SpecificBook from "./Page/SpecificBook/SpecificBook";
 import Teachers from "./Page/Teachers";
 import GoogleAuth from "./Page/GoogleAuth";
+import Midsem from "./Page/QuestionPapers/Midsem";
+import TEE from "./Page/QuestionPapers/TEE";
 
 // redux action
 import { getMyself } from "./Redux/Reducer/user/user.action";
@@ -77,8 +79,8 @@ function App() {
       <TeachersLayoutHOC path="/quespaper" exact component={Teachers} />
 
       <QuestionPaperLayoutHOC path="/quespaper/teacher/:id" exact component={RedirectTeacher} />
-      <QuestionPaperLayoutHOC path="/quespaper/teacher/:id/termend" exact component={Temp} />
-      <QuestionPaperLayoutHOC path="/quespaper/teacher/:id/midsem" exact component={Temp} />
+      <QuestionPaperLayoutHOC path="/quespaper/teacher/:id/termend" exact component={TEE} />
+      <QuestionPaperLayoutHOC path="/quespaper/teacher/:id/midsem" exact component={Midsem} />
     </>
   );
 }

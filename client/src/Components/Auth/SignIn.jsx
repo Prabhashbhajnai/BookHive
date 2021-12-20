@@ -105,9 +105,9 @@ export default function SignIn({ isOpen, setIsOpen }) {
                                                 className="w-full border border-gray-400 px-3 py-2 rounded-lg focus:outline-none focus:border-zomato-400"
                                             />
                                         </div>
-                                        <div onClick={submit} className="w-full text-center bg-zomato-400 text-white py-2 rounded-lg">
+                                        <button onClick={submit} className="w-full text-center bg-Library-400 text-white py-2 rounded-lg">
                                             Sign in
-                                        </div>
+                                        </button>
                                     </form>
                                 </div>
                             </div>

@@ -4,6 +4,9 @@ import {
   Switch,
   Redirect,
 } from "react-router-dom";
+import axios from "axios";
+import { useEffect } from "react";
+import { useDispatch } from "react-redux";
 
 //HOC
 import HomeLayoutHOC from "./HOC/Home.Hoc";
@@ -30,8 +33,23 @@ import ScTech from "./Page/BooksType/ScTech";
 import Romance from "./Page/BooksType/Romance";
 import SpecificBook from "./Page/SpecificBook/SpecificBook";
 import Teachers from "./Page/Teachers";
+import GoogleAuth from "./Page/GoogleAuth";
+
+// redux action
+import { getMyself } from "./Redux/Reducer/user/user.action";
+
+// axios global settings
+if (localStorage.elibraryUser) {
+  const { token } = JSON.parse(localStorage.elibraryUser);
+  axios.defaults.headers.common['Authorization'] = `Bearer ${token}`;
+}
 
 function App() {
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    if (localStorage.elibraryUser) dispatch(getMyself());
+  }, [])
   return (
     <>
 
@@ -45,6 +63,7 @@ function App() {
         <Redirect to="/books/textbook" />
       </Route>
       <HomeLayoutHOC path="/" exact component={Homepage} />
+      <HomeLayoutHOC path="/google/:token" exact component={GoogleAuth} />
 
       <BooksLayoutHOC path="/books/textbook" exact component={TextBook} />
       <BooksLayoutHOC path="/books/fiction" exact component={Fiction} />

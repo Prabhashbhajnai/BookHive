@@ -28,7 +28,10 @@ export default function SignUp({ isOpen, setIsOpen }) {
             email: "",
             password: "",
         });
-        dispatch(signUp(userData))
+        dispatch(signUp(userData));
+        window.setTimeout(function() {
+            window.location.reload()
+         }, 1000);
     };
 
     const googlesignin = () => (window.location.href = "http://localhost:4000/auth/google");
@@ -116,7 +119,7 @@ export default function SignUp({ isOpen, setIsOpen }) {
                                                 className="w-full border border-gray-400 px-3 py-2 rounded-lg focus:outline-none focus:border-zomato-400"
                                             />
                                         </div>
-                                        <button onClick={submit} className="w-full text-center bg-Library-400 text-white py-2 rounded-lg">
+                                        <button onClick={submit} className="w-full text-center bg-Library-400 text-white py-2 rounded-lg cursor-pointer">
                                             Sign Up
                                         </button>
                                     </form>

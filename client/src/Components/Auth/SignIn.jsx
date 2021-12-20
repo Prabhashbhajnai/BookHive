@@ -27,6 +27,7 @@ export default function SignIn({ isOpen, setIsOpen }) {
             password: "",
         });
         dispatch(signIn(userData));
+        // this is to reload the page after 1 sec
         window.setTimeout(function() {
             window.location.reload()
          }, 1000);
@@ -109,7 +110,7 @@ export default function SignIn({ isOpen, setIsOpen }) {
                                                 className="w-full border border-gray-400 px-3 py-2 rounded-lg focus:outline-none focus:border-zomato-400"
                                             />
                                         </div>
-                                        <div onClick={submit} className="w-full text-center bg-Library-400 text-white py-2 rounded-lg">
+                                        <div onClick={submit} className="w-full text-center bg-Library-400 text-white py-2 rounded-lg cursor-pointer">
                                             Sign in
                                         </div>
                                     </form>

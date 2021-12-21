@@ -9,6 +9,14 @@ import IndividualBook from '../Components/Individual Book/IndividualBook';
 // redux actions
 import { getSpecificBook } from '../Redux/Reducer/book/book.action';
 
+function ScrollToTopOnMount() {
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
+
+    return null;
+}
+
 const IndividualBookLayout = (props) => {
     const [book, setBook] = useState({
         photo: "",
@@ -35,6 +43,7 @@ const IndividualBookLayout = (props) => {
     }, []);
     return (
         <>
+            <ScrollToTopOnMount />
             <Navbar />
             <div className="container mx-auto py-10 px-4 lg:px-32">
                 <IndividualBook

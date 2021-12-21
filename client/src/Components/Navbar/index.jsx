@@ -1,12 +1,13 @@
 import React, { useState } from 'react';
 import { FaUserAlt } from "react-icons/fa";
 import { Link } from "react-router-dom";
-import { useDispatch ,useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import gravatar from 'gravatar';
 
 // components
 import SignIn from '../Auth/SignIn';
 import SignUp from '../Auth/SignUp';
+import PaymentModal from '../PaymentModal/Payment';
 
 // redux action
 import { signOut } from '../../Redux/Reducer/Auth/auth.action';
@@ -35,7 +36,7 @@ const MobileNav = ({ SignIn, SignUp }) => {
                     UseApp
                 </button>
                 {
-                    reduxState?.user?.fullname? (
+                    reduxState?.user?.fullname ? (
                         <>
                             <div onClick={() => setIsDropDownOpen(prev => !prev)} className="border p-2 border-gray-500 text-Library-300 w-12 h-12 rounded-full">
                                 <img
@@ -71,14 +72,23 @@ const MobileNav = ({ SignIn, SignUp }) => {
 
 const LargeNav = ({ SignIn, SignUp }) => {
     const [isDropDownOpen, setIsDropDownOpen] = useState(false);
+    const [isOpen, setIsOpen] = useState(false);
+    const [price, setPrice] = useState(0);
+
     const dispatch = useDispatch();
 
     const reduxState = useSelector(global => global.user.user);
 
     const signOutHandler = () => dispatch(signOut());
 
+    const subscribe = () => {
+        setIsOpen(true);
+        setPrice(150);
+    };
+
     return (
         <>
+            <PaymentModal setIsOpen={setIsOpen} isOpen={isOpen} price={price} />
             <div className=" container px-20 mx-auto">
                 <div className="hidden w-full items-center justify-between lg:flex gap-5 ">
                     <Link to={"/"}>
@@ -91,7 +101,7 @@ const LargeNav = ({ SignIn, SignUp }) => {
                         </div>
                     </Link>
                     {
-                        reduxState?.user?.fullname? (
+                        reduxState?.user?.fullname ? (
                             <div className="relative w-20">
                                 <div onClick={() => setIsDropDownOpen(prev => !prev)} className="border p-2 border-gray-500 text-Library-300 w-12 h-12 rounded-full">
                                     <img
@@ -101,8 +111,11 @@ const LargeNav = ({ SignIn, SignUp }) => {
                                     />
                                 </div>
                                 {isDropDownOpen && (
-                                    <div className="absolute shadow-lg py-3 -right-4 w-full bg-white z-30 flex flex-col gap-2">
-                                        <button onClick={signOutHandler}>Sign Out</button>
+                                    <div className="absolute shadow-lg right-4 items-center w-full bg-white z-30 flex flex-col gap-2">
+                                        <button onClick={signOutHandler} className='items-center'>Sign Out</button>
+                                        <button onClick={subscribe} className="bg-Library-400 text-white py-2 items-center px-1">
+                                            Subscribe
+                                        </button>
                                     </div>
                                 )}
                             </div>

@@ -28,10 +28,11 @@ const HomeCarousal = () => {
     ];
     const settings = {
         arrows: true,
-        speed: 500,
+        speed: 2000,
         slidesToShow: 1,
         slidesToScroll: 1,
-        autoplaySpeed: 2000,
+        autoplay: false,
+        autoplaySpeed: 3000,
         responsive: [
             {
                 breakpoint: 1024,
@@ -61,10 +62,7 @@ const HomeCarousal = () => {
 
     return (
         <>
-            <h1 className="text-xl mb-4 mt-4 font-semibold">
-                Inspiration for your first Order
-            </h1>
-            <div className="lg:hidden flex gap-3 lg:gap-0 flex-wrap justify-between">
+            <div className="lg:hidden flex flex-wrap justify-between mt-4">
                 <Slider {...settings} className='flex flex-wrap px-3 w-full'>
                     {categories.map((books) => (
                         <BooksCategory {...books} />
@@ -74,7 +72,7 @@ const HomeCarousal = () => {
 
             <div className="hidden lg:block">
 
-                <Slider {...settings} className='flex flex-wrap px-32 w-full'>
+                <Slider {...settings} className='flex flex-wrap px-32 w-full mt-4'>
                     {categories.map((books) => (
                         <BooksCategory {...books} />
                     ))}

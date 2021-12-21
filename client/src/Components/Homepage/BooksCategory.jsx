@@ -21,7 +21,7 @@ const HomeSmCard = ({image, id}) => {
 const HomeLgCard = ({image, id}) => {
     return (
     <Link to={`/books/category/${id}`}>
-       <div className="hidden lg:block w-full h-60 overflow-hidden">
+       <div className="hidden lg:block w-full h-60">
            <div className="w-full h-full">
                <img src={image}
                alt="Book"

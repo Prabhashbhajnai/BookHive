@@ -1,9 +1,10 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 
-const HomeSmCard = ({image, title}) => {
+const HomeSmCard = ({image, id}) => {
     return (
-        <>
+        <Link to={`/books/category/${id}`}>
            <div className="lg:hidden bg-white shadow rounded-md w-90">
                <div className="w-full h-40">
                    <img src={image}
@@ -12,14 +13,14 @@ const HomeSmCard = ({image, title}) => {
                    />
                </div>
            </div>
-        </>
+        </Link>
     );
 };
 
 
-const HomeLgCard = ({image, title}) => {
+const HomeLgCard = ({image, id}) => {
     return (
-    <>
+    <Link to={`/books/category/${id}`}>
        <div className="hidden lg:block w-full h-60 overflow-hidden">
            <div className="w-full h-full">
                <img src={image}
@@ -28,7 +29,7 @@ const HomeLgCard = ({image, title}) => {
                />
            </div>
        </div>
-    </>
+    </Link>
   );
 };
 

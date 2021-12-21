@@ -63,7 +63,7 @@ function App() {
       </Switch>
 
       <Route path="/books" exact>
-        <Redirect to="/books/textbook" />
+        <Redirect to="/books/fantasyfiction" />
       </Route>
       <HomeLayoutHOC path="/" exact component={Homepage} />
       <HomeLayoutHOC path="/google/:token" exact component={GoogleAuth} />

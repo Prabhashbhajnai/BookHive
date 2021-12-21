@@ -69,7 +69,7 @@ function App() {
       <HomeLayoutHOC path="/google/:token" exact component={GoogleAuth} />
 
       <BooksLayoutHOC path="/books/textbook" exact component={TextBook} />
-      <BooksLayoutHOC path="/books/fiction" exact component={Fiction} />
+      <BooksLayoutHOC path="/books/fantasyfiction" exact component={Fiction} />
       <BooksLayoutHOC path="/books/science-fic" exact component={ScFi} />
       <BooksLayoutHOC path="/books/romance" exact component={Romance} />
       <BooksLayoutHOC path="/books/science-tech" exact component={ScTech} />

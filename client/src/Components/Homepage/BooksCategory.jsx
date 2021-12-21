@@ -4,15 +4,12 @@ import React from "react";
 const HomeSmCard = ({image, title}) => {
     return (
         <>
-           <div className="lg:hidden bg-white shadow rounded-md w-24 md:56">
+           <div className="lg:hidden bg-white shadow rounded-md w-90">
                <div className="w-full h-40">
                    <img src={image}
                    alt="Book"
-                   className="w-full h-full object-cover rounded-t-md"
+                   className="w-full h-full rounded-md"
                    />
-               </div>
-               <div>
-                   <h3 className="text-sm my-1 text-center font-light">{title}</h3>
                </div>
            </div>
         </>
@@ -30,13 +27,10 @@ const HomeLgCard = ({image, title}) => {
                className="w-full h-full object-cover rounded-md shadow-lg"
                />
            </div>
-           <div>
-               <h3 className="text-xl my-1 font-medium">{title}</h3>
-           </div>
        </div>
     </>
   );
-;}
+};
 
 const BooksCategory = (props) => {
     return (

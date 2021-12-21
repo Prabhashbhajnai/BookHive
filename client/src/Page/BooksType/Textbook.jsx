@@ -25,7 +25,7 @@ const TextBook = () => {
 
 	return (
 		<>
-			<div className="flex flex-wrap gap-10">
+			<div className="flex flex-wrap gap-14 mx-1">
 				{bookList.map((book) => (
 					<BookCard {...book} key={book._id} />
 				))}

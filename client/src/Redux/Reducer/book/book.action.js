@@ -20,7 +20,7 @@ export const getFiction = () => async (dispatch) => {
     try {
         const bookList = await axios({
             method: "GET",
-            url: `http://localhost:4000/books/?genre=fiction`,
+            url: `http://localhost:4000/books/?genre=fantasy fiction`,
         });
 
         return dispatch({ type: GET_BOOK, payload: bookList.data });

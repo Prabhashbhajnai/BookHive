@@ -12,20 +12,13 @@ const HomeCarousal = () => {
         image: "https://e-library-vit.s3.ap-south-1.amazonaws.com/All%20The%20Bright%20Places.jpg"
     },
     {
-        image: "https://media.istockphoto.com/photos/open-book-on-library-roomeducation-concept-picture-id543067020?k=20&m=543067020&s=612x612&w=0&h=Y1oaroI-HgWhH-FC3IpBY32x7Raz-hyG5XrT_vSXiCA=",
-        title: "Book 2",
+        image: "https://e-library-vit.s3.ap-south-1.amazonaws.com/Harry%20Potter.jpg",
     },
     {
-        image: "https://media.istockphoto.com/photos/flying-color-books-on-pastel-yellow-background-picture-id1304915362?b=1&k=20&m=1304915362&s=170667a&w=0&h=1oBLMT9JLYt6Ju3LbSppu8Fga92YfvSHiPu7zQlculg=",
-        title: "Book 3",
+        image: "https://e-library-vit.s3.ap-south-1.amazonaws.com/Looking%20for%20Alaska.jpg",
     },
     {
-        image: "https://images.unsplash.com/photo-1544947950-fa07a98d237f?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTN8fGJvb2t8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
-        title: "Book 4",
-    },
-    {
-        image: "https://media.istockphoto.com/photos/concept-of-an-open-magic-book-open-pages-with-water-and-land-and-picture-id1279460648?b=1&k=20&m=1279460648&s=170667a&w=0&h=uZa830sWo8hlFN0Y7FnQ14giNC0Z2EBNuTMuNJeJhQg=",
-        title: "Book 5",
+        image: "https://e-library-vit.s3.ap-south-1.amazonaws.com/Lord%20of%20the%20Rings%201.jpg",
     },
 
     ];
@@ -39,14 +32,14 @@ const HomeCarousal = () => {
             {
                 breakpoint: 1024,
                 settings: {
-                    slidesToShow: 4,
+                    slidesToShow: 1,
                     slidesToScroll: 1,
                 }
             },
             {
                 breakpoint: 768,
                 settings: {
-                    slidesToShow: 3,
+                    slidesToShow: 1,
                     slidesToScroll: 1,
                 }
             },
@@ -68,12 +61,11 @@ const HomeCarousal = () => {
                 Inspiration for your first Order
             </h1>
             <div className="lg:hidden flex gap-3 lg:gap-0 flex-wrap justify-between">
-
-                {categories.map((books) => (
-                    <BooksCategory {...books} />
-                ))}
-
-
+                <Slider {...settings} className='flex flex-wrap px-3 w-full'>
+                    {categories.map((books) => (
+                        <BooksCategory {...books} />
+                    ))}
+                </Slider>
             </div>
 
             <div className="hidden lg:block">

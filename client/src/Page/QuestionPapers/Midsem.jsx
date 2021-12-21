@@ -27,12 +27,12 @@ const Midsem = () => {
                 <IndividualPaper
                     date="November-2021"
                     subject="DAA"
-                    location="https://e-library-vit.s3.ap-south-1.amazonaws.com/A11_DA1_0051_CSE2002_DSA_Praveen_Interim%202021-22_Midterm_PoM.pdf"
+                    location="https://e-library-vit.s3.ap-south-1.amazonaws.com/A11_DA1_0051_CSE2002_DSA_Dr.+Praveen+2021-22_TEE.pdf"
                 />
                 <IndividualPaper
                     date="November-2021"
                     subject="DAA"
-                    location="https://e-library-vit.s3.ap-south-1.amazonaws.com/A11_DA1_0051_CSE2002_DSA_Praveen_Interim%202021-22_Midterm_PoM.pdf"
+                    location="https://e-library-vit.s3.ap-south-1.amazonaws.com/A11_DA1_0051_CSE2002_DSA_Dr.+Praveen+2021-22_TEE.pdf"
                 />
             </>
         </div>

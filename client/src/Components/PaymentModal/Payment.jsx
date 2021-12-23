@@ -13,7 +13,7 @@ export default function PaymentModal({ isOpen, setIsOpen, price }) {
             currency: "INR",
             name: "E-Library",
             description: "E-Library Subscription",
-            image: "https://i.ibb.co/zPBYW3H/imgbin-bookmyshow-office-android-ticket-png.png",
+            image: "https://www.boxfordlibrary.org/wordpress/wp-content/uploads/2014/03/elibrary-logo.png",
             handler: () => {
                 setIsOpen(false);
                 alert("Payment Done");

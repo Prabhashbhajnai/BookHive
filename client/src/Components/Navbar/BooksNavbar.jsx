@@ -4,13 +4,16 @@ import {RiSearch2Line} from "react-icons/ri";
 import {AiOutlineArrowLeft}from "react-icons/ai";
 import {Link} from "react-router-dom";
 
+// Assets
+import logo from '../../Assets/BookHive.png'
+
 const MobileNav = () => {
     return (
     <div className="flex w-full items-center justify-between lg:hidden">
         <AiOutlineArrowLeft/>
         <Link to={"/"}>
        <div className="w-28 h-16"> 
-            <img src="https://www.boxfordlibrary.org/wordpress/wp-content/uploads/2014/03/elibrary-logo.png"  
+            <img src={logo} 
             alt="logo"
             className="w-full h-full rounded-lg transform transition duration-1000 hover:scale-110"
             />   
@@ -36,7 +39,8 @@ const LargeNav = () => {
         <Link to={"/"}>
         <div className="w-28 h-16">
             <img 
-            src="https://www.boxfordlibrary.org/wordpress/wp-content/uploads/2014/03/elibrary-logo.png"  
+            // src="https://www.boxfordlibrary.org/wordpress/wp-content/uploads/2014/03/elibrary-logo.png"
+            src={logo}  
             alt="logo"
             className="w-full h-full rounded-lg transform transition duration-1000 hover:scale-110"
             />

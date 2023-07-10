@@ -28,9 +28,9 @@ export default function SignIn({ isOpen, setIsOpen }) {
         });
         dispatch(signIn(userData));
         // this is to reload the page after 1 sec
-        window.setTimeout(function() {
+        /* window.setTimeout(function() {
             window.location.reload()
-         }, 1000);
+         }, 1000); */
     };
 
     const googlesignin = () => (window.location.href = "http://localhost:4000/auth/google");

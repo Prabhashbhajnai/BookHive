@@ -9,6 +9,9 @@ import SignIn from '../Auth/SignIn';
 import SignUp from '../Auth/SignUp';
 import PaymentModal from '../PaymentModal/Payment';
 
+// Assets
+import logo from '../../Assets/BookHive.png'
+
 // redux action
 import { signOut } from '../../Redux/Reducer/Auth/auth.action';
 
@@ -25,7 +28,7 @@ const MobileNav = ({ SignIn, SignUp }) => {
         <div className="flex w-full items-center justify-between lg:hidden">
             <Link to={"/"}>
                 <div className="w-28 h-16">
-                    <img src="https://www.boxfordlibrary.org/wordpress/wp-content/uploads/2014/03/elibrary-logo.png"
+                    <img src={logo}
                         alt="logo"
                         className="w-full h-full"
                     />
@@ -94,7 +97,7 @@ const LargeNav = ({ SignIn, SignUp }) => {
                     <Link to={"/"}>
                         <div className="w-28 h-16">
                             <img
-                                src="https://www.boxfordlibrary.org/wordpress/wp-content/uploads/2014/03/elibrary-logo.png"
+                                src={logo}
                                 alt="logo"
                                 className="w-full h-full"
                             />
